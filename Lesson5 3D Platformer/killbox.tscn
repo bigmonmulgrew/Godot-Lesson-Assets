@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://djfyvr0kfsjxf"]
+
+[ext_resource type="Script" path="res://Scripts/killbox.gd" id="1_my4q5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wm8c"]
+size = Vector3(10000, 1, 10000)
+
+[node name="Killbox" type="Area3D"]
+script = ExtResource("1_my4q5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_0wm8c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

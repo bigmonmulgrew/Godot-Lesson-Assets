@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://b6jw7mkgna8c1"]
+
+[ext_resource type="Script" path="res://sphere.gd" id="1_hamng"]
+[ext_resource type="Script" path="res://cube.gd" id="2_ymbg2"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_13aa5"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_1j3dw"]
+sky_material = SubResource("ProceduralSkyMaterial_13aa5")
+
+[sub_resource type="Environment" id="Environment_2sif6"]
+background_mode = 2
+sky = SubResource("Sky_1j3dw")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="SphereMesh" id="SphereMesh_1f5x4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_17qpj"]
+
+[node name="Main" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_2sif6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="SphereMesh3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_1f5x4")
+script = ExtResource("1_hamng")
+
+[node name="CubeMesh3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73712, 0, 0)
+mesh = SubResource("BoxMesh_17qpj")
+script = ExtResource("2_ymbg2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sphere Readout" type="Label" parent="CanvasLayer"]
+offset_left = 3.0
+offset_top = 13.0
+offset_right = 1150.0
+offset_bottom = 71.0
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "dsadsadasdasdas"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Cube Readout" type="Label" parent="CanvasLayer"]
+offset_left = 2.0
+offset_top = 71.0
+offset_right = 1149.0
+offset_bottom = 129.0
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "dsadsadasdasdas"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Cube Readout2" type="Label" parent="CanvasLayer"]
+offset_left = 2.0
+offset_top = 123.0
+offset_right = 1149.0
+offset_bottom = 181.0
+size_flags_horizontal = 6
+size_flags_vertical = 2
+theme_override_font_sizes/font_size = 42
+text = "dsadsadasdasdas"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.994868, 1.85309e-09, 0.101178, -0.0234443, 0.972784, 0.230525, -0.0984242, -0.231714, 0.967792, 0.645284, 1.26076, 2.7486)
