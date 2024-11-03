@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cygxymnwd64rr"
+path="res://.godot/imported/flag.obj-8be0b33fab827962c84e44e3300b91fb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/flag.obj-8be0b33fab827962c84e44e3300b91fb.mesh"]
+
+source_file="res://3rd Party Assets/kenney_platformer-kit/Models/OBJ format/flag.obj"
+dest_files=["res://.godot/imported/flag.obj-8be0b33fab827962c84e44e3300b91fb.mesh", "res://.godot/imported/flag.obj-8be0b33fab827962c84e44e3300b91fb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

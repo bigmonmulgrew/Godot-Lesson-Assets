@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bembab71rbhdg"
+path="res://.godot/imported/coin-bronze.obj-0eca71873846bcb68ffd46461e950d36.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coin-bronze.obj-0eca71873846bcb68ffd46461e950d36.mesh"]
+
+source_file="res://3rd Party Assets/kenney_platformer-kit/Models/OBJ format/coin-bronze.obj"
+dest_files=["res://.godot/imported/coin-bronze.obj-0eca71873846bcb68ffd46461e950d36.mesh", "res://.godot/imported/coin-bronze.obj-0eca71873846bcb68ffd46461e950d36.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

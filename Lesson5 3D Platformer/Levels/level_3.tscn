@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://bipx4464x1bjp"]
+[gd_scene load_steps=12 format=3 uid="uid://bipx4464x1bjp"]
 
 [ext_resource type="PackedScene" uid="uid://dce5v0pxdqyog" path="res://player.tscn" id="1_x32pa"]
 [ext_resource type="PackedScene" uid="uid://bre6gbopj6ypw" path="res://finish_flag.tscn" id="2_uu45c"]
 [ext_resource type="PackedScene" uid="uid://djfyvr0kfsjxf" path="res://killbox.tscn" id="3_q1lmv"]
+[ext_resource type="PackedScene" uid="uid://bbhmlcb0q38hf" path="res://Platforms/block_grass_corner.tscn" id="4_ixu8b"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d3o62"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -68,7 +69,22 @@ shape = SubResource("ConcavePolygonShape3D_lc3je")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -12, 0)
 
 [node name="CSGBox3D" type="CSGBox3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -9.24715)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.10496, -1, -9.24715)
 use_collision = true
 size = Vector3(1, 1, 6.43335)
 material = SubResource("StandardMaterial3D_0d4jx")
+
+[node name="block-grass-corner" parent="." instance=ExtResource("4_ixu8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38934, -1.7105, -6.01855)
+
+[node name="block-grass-corner3" parent="." instance=ExtResource("4_ixu8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38934, -1.7105, -10.4146)
+
+[node name="block-grass-corner4" parent="." instance=ExtResource("4_ixu8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00831, -1.7105, -9.09573)
+
+[node name="block-grass-corner5" parent="." instance=ExtResource("4_ixu8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.00831, -1.7105, -12.4878)
+
+[node name="block-grass-corner2" parent="." instance=ExtResource("4_ixu8b")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.38934, -1.7105, -7.66203)
